@@ -10,7 +10,7 @@ import {
   Navigation, 
   Bookmark, 
   Target,
-  Star,
+  
   ChevronRight,
   Apple,
   Check
@@ -80,26 +80,6 @@ const PlaceGenieLanding = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      location: "San Francisco, CA",
-      text: "The voice search is incredible! I just say 'find me a cozy coffee shop' and it finds exactly what I'm looking for.",
-      rating: 5
-    },
-    {
-      name: "Mike Rodriguez", 
-      location: "Austin, TX",
-      text: "The AI recommendations are spot-on. It learns my preferences and suggests places I actually love.",
-      rating: 5
-    },
-    {
-      name: "Emma Thompson",
-      location: "New York, NY", 
-      text: "Trip planning has never been easier. It created a perfect day itinerary in seconds!",
-      rating: 5
-    }
-  ];
 
   const pricingPlans = [
     {
@@ -153,7 +133,6 @@ const PlaceGenieLanding = () => {
               <NavLink href="#features">Features</NavLink>
               <NavLink href="#how-it-works">How it Works</NavLink>
               <NavLink href="#pricing">Pricing</NavLink>
-              <NavLink href="#testimonials">Reviews</NavLink>
             </nav>
 
             {/* Download Button */}
@@ -180,7 +159,7 @@ const PlaceGenieLanding = () => {
                 <NavLink href="#features">Features</NavLink>
                 <NavLink href="#how-it-works">How it Works</NavLink>
                 <NavLink href="#pricing">Pricing</NavLink>
-                <NavLink href="#testimonials">Reviews</NavLink>
+                
                 <Button className="gradient-primary text-white w-full">
                   <Apple className="w-4 h-4 mr-2" />
                   Download
@@ -295,40 +274,6 @@ const PlaceGenieLanding = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-up">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              What Our Users Say
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join thousands of explorers who've discovered amazing places with PlaceGenie
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="animate-scale-in border-0 gradient-card hover:shadow-card transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Pricing Section */}
       <section id="pricing" className="py-20">
